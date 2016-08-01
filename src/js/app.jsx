@@ -71,26 +71,14 @@ class Navigation extends React.Component {
 const NavigationItem = (props) => {
 	return (
 		<ul className="c-list p-navigation">
-		{NAVIGATION_ITEMS.map((type) =>
-			<NavigationLavel
-				label = { type.label }
-			/>
+		{NAVIGATION_ITEMS.map((type, index) =>
+			<li className="c-list__item p-navigation__item c-link" key={index}>
+				{type.label}
+			</li>
 		)}
 		</ul>
 	);
 }
-
-class NavigationLavel extends React.Component {
-	render() {
-		return (
-			<li className="c-list__item p-navigation__item c-link">
-				{this.props.label}
-			</li>
-		);
-	}
-}
-
-
 
 class ReactComponent extends React.Component {
 	constructor() {
