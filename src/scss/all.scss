@@ -19,6 +19,10 @@
 // Layout
 // ===============================================================
 @import "layout/core";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/side";
+@import "layout/main";
 
 // ===============================================================
 // Object
@@ -27,12 +31,13 @@
 // --------------------------------------------
 // Component
 // --------------------------------------------
-
+@import "object/component/list";
+@import "object/component/link";
 
 // --------------------------------------------
 // Project
 // --------------------------------------------
-
+@import "object/project/navigation";
 
 // --------------------------------------------
 // Utility

@@ -1,0 +1,15 @@
+@charset "utf-8";
+/*
+ * objact/project/_navigation.scss
+ */
+
+.p-navigation {
+
+}
+
+.p-navigation__item {
+	padding: 10px 10px 8px 12px;
+	box-sizing: border-box;
+	@include fs-base;
+	cursor: pointer;
+}

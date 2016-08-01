@@ -54,7 +54,7 @@ export default [
 			extensions: ['', '.css']
 		},
 		plugins: [
-	        new ExtractTextPlugin("all.css")
+	        new ExtractTextPlugin('all.css')
 	    ]
 	}
 ];

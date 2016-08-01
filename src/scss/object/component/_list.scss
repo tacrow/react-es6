@@ -1,0 +1,14 @@
+@charset "utf-8";
+/*
+ * objact/component/_list.scss
+ */
+
+.c-list {
+	display: block;
+}
+
+.c-list__item {
+	width: 100%;
+	color: #ffffff;
+	@include fs12;
+}
