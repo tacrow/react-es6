@@ -2,10 +2,14 @@
 
 import React from 'react'
 import {render} from 'react-dom'
+import classname from 'classname'
+import {Router, Route, Link, IndexRoute, DefaultRoute, BrowserHistory, HashHistory} from 'react-router'
 
-// import Classname from 'classname'
-import { Router, Route, DefaultRoute, Link, IndexLink, RouteHandler, browserHistory } from 'react-router'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import SideContents from './components/SideContents'
 
+import ComponentTop from './service/ComponentTop'
 import ComponentCardloan from './service/ComponentCardloan'
 import ComponentCreditcard from './service/ComponentCreditcard'
 import ComponentFx from './service/ComponentFx'
@@ -14,124 +18,7 @@ import ComponentDenki from './service/ComponentDenki'
 import ComponentVod from './service/ComponentVod'
 import ComponentSim from './service/ComponentSim'
 
-// Main Layout
-class Header extends React.Component {
-	render() {
-		return (
-			<header id='l-header'>
-				<h1 className='l-header__logo'>React-ES6</h1>
-			</header>
-		);
-	}
-}
-
-class Footer extends React.Component {
-	render() {
-		return (
-			<footer id='l-footer'>
-				<p className='l-footer__copyright'>Copyright © React-ES6 All Rights Reserved.</p>
-			</footer>
-		);
-	}
-}
-
-class SideContents extends React.Component {
-	render() {
-		return (
-			<div id='l-contents__side'>
-				<Navigation />
-			</div>
-		);
-	}
-}
-class MainContents extends React.Component {
-	render() {
-		return (
-			<div id='l-contents__main'>
-				<div className='l-main__wrapper'>Main</div>
-			</div>
-		);
-	}
-}
-
-// Detail
-
-/*
- * Navigation
- */
-const NavigationItems = [
-	{
-		label: '即日融資安心カードローン',
-		rout: 'cardloan',
-		api: 'cardloan'
-	},
-	{
-		label: 'クレジットカード人気比較',
-		rout: 'creditcard',
-		api: 'creditcard'
-	},
-	{
-		label: '外為FX徹底比較.com',
-		rout: 'fx',
-		api: 'fx'
-	},
-	{
-		label: '脱毛口コミランキングナビ',
-		rout: 'datsumo',
-		api: 'datsumo'
-	},
-	{
-		label: '電気比較情報.com',
-		rout: 'denki',
-		api: 'denki'
-	},
-	{
-		label: '動画配信サービス比較情報.com',
-		rout: 'vod',
-		api: 'vod'
-	},
-	{
-		label: '格安SIM比較情報.com',
-		rout: 'sim',
-		api: 'sim'
-	},
-];
-
-class Navigation extends React.Component {
-	render() {
-		return　(
-			<nav>
-				<NavigationItem />
-			</nav>
-		);
-	}
-}
-
-class NavigationItem extends React.Component {
-	handleClick(key) {
-		var $elem = $(key.target);
-		var target = $elem.attr('data-graph-api');
-		var baseUrl = 'api/';
-		// $.ajax({
-
-		// });
-	}
-	render() {
-		return (
-			<ul className='c-list p-navigation'>
-			{NavigationItems.map((type, index) =>
-				<li className='c-list__item p-navigation__item' key={index} data-graph-api={type.api} onClick={this.handleClick}>
-					<Link to={type.rout}>
-						{type.label}
-					</Link>
-				</li>
-			)}
-			</ul>
-		);
-	}
-}
-
-class ReactComponent extends React.Component {
+class App extends React.Component {
 	constructor() {
 		super();
 		this.state = {
@@ -157,7 +44,10 @@ class ReactComponent extends React.Component {
 				<Header />
 				<div id='l-contents' style={{height: + this.state.height + 'px'}}>
 					<SideContents />
-					<MainContents />
+					<div id='l-contents__main'>
+						<div className='l-main__wrapper'>Main</div>
+						{this.props.children}
+					</div>
 				</div>
 				<Footer />
 			</div>
@@ -165,21 +55,19 @@ class ReactComponent extends React.Component {
 	}
 }
 
-// render(
-// 	<ReactComponent />,
-// 	document.getElementById('react-contents')
-// );
+let routes = (
+	<Route path="/" component={App}>
+		<IndexRoute component={ComponentTop} />
+		<Route path='cardloan' component={ComponentCardloan} />
+		<Route path='creditcard' component={ComponentCreditcard} />
+		<Route path='fx' component={ComponentFx} />
+		<Route path='datsumo' component={ComponentDatsumo} />
+		<Route path='denki' component={ComponentDenki} />
+		<Route path='vod' component={ComponentVod} />
+		<Route path='sim' component={ComponentSim} />
+	</Route>
+);
 
 render((
-	<Router history={browserHistory}>
-		<Route path='' handler={ReactComponent}>
-			<Route name='cardloan' handler={ComponentCardloan} />
-			<Route name='creditcard' handler={ComponentCreditcard} />
-			<Route name='fx' handler={ComponentFx} />
-			<Route name='datsumo' handler={ComponentDatsumo} />
-			<Route name='denki' handler={ComponentDenki} />
-			<Route name='vod' handler={ComponentVod} />
-			<Route name='sim' handler={ComponentSim} />
-		</Route>
-	</Router>
+	<Router history={BrowserHistory}>{routes}</Router>
 ), document.getElementById('react-contents'))

@@ -1,0 +1,24 @@
+@charset "utf-8";
+/*
+ * objact/component/_head.scss
+ */
+
+.c-head {
+	position: relative;
+	padding: 5px 10px;
+	color: #ffffff;
+	@include fs14;
+	font-weight: bold;
+}
+
+.c-head--navigation {
+	padding: 5px 10px 10px 25px;
+	&:before {
+		content: '▶';
+		position: absolute;
+		left: 10px;
+		top: 5px;
+		color: #ffffff;
+		@include fs8;
+	}
+}
