@@ -3,73 +3,115 @@ import {Link} from 'react-router'
 
 const NavigationItems = [
 	{
+		id: 1,
 		label: '即日融資安心カードローン',
 		route: 'cardloan',
 		api: 'cardloan'
 	},
 	{
+		id: 2,
 		label: 'クレジットカード人気比較',
 		route: 'creditcard',
 		api: 'creditcard'
 	},
 	{
+		id: 3,
 		label: '外為FX徹底比較.com',
 		route: 'fx',
 		api: 'fx'
 	},
 	{
+		id: 4,
 		label: '脱毛口コミランキングナビ',
 		route: 'datsumo',
 		api: 'datsumo'
 	},
 	{
+		id: 5,
 		label: '電気比較情報.com',
 		route: 'denki',
 		api: 'denki'
 	},
 	{
+		id: 6,
 		label: '動画配信サービス比較情報.com',
 		route: 'vod',
 		api: 'vod'
 	},
 	{
+		id: 7,
 		label: '格安SIM比較情報.com',
 		route: 'sim',
 		api: 'sim'
-	},
+	}
 ];
 
 export default class Navigation extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			NavigationItems: NavigationItems,
+			activeList: ''
+		};
+	}
+	changeNavList(type) {
+		this.setState({
+			activeList: type.id
+		});
+	}
 	render() {
 		return　(
 			<nav>
-				<NavigationItem />
+				<NavigationList
+					activeList={this.state.activeList}
+					NavigationItems={this.state.NavigationItems}
+					changeNavList={this.changeNavList.bind(this)}
+				/>
 			</nav>
 		);
 	}
 }
 
 class NavigationItem extends React.Component {
-	handleClick(key) {
-		var $elem = $(key.target);
-		var target = $elem.attr('data-graph-api');
-		var baseUrl = 'api/';
-		{/*
-		$.ajax({
+	constructor(props) {
+		super(props);
+	}
+	handleClick() {
+		this.props.handleClick();
+	}
+	render() {
+		let def = 'c-list p-navigation__item';
+		let active = 'c-list p-navigation__item is-active';
+		return (
+			<li className={this.props.isActive ? active : def} data-graph-api={this.props.api} onClick={this.handleClick.bind(this)}>
+				<Link to={this.props.route}>
+					{this.props.label}
+				</Link>
+			</li>
+		);
+	}
+}
 
-		});
-		*/}
+class NavigationList extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+	handleClick(type) {
+		this.props.changeNavList(type);
 	}
 	render() {
 		return (
 			<ul className='c-list p-navigation'>
-			{NavigationItems.map((type, index) =>
-				<li className='c-list__item p-navigation__item' key={index} data-graph-api={type.api} onClick={this.handleClick}>
-					<Link to={type.route}>
-						{type.label}
-					</Link>
-				</li>
-			)}
+			{this.props.NavigationItems.map(type => (
+				<NavigationItem
+					key={type.id}
+					handleClick={this.handleClick.bind(this, type)}
+					data-graph-api={type.api}
+					label={type.label}
+					route={type.route}
+					isActive={this.props.activeList === type.id}
+				/>
+			))}
 			</ul>
 		);
 	}

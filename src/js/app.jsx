@@ -2,8 +2,7 @@
 
 import React from 'react'
 import {render} from 'react-dom'
-import classname from 'classname'
-import {Router, Route, Link, IndexRoute, DefaultRoute, BrowserHistory, HashHistory} from 'react-router'
+import {Router, Route, Link, IndexRoute, browserHistory} from 'react-router'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -36,7 +35,9 @@ class App extends React.Component {
 	windowResize() {
 		const windowHeight = $(window).height();
 		const contentHeight = windowHeight - 100;
-		this.setState({height: contentHeight});
+		this.setState({
+			height: contentHeight
+		});
 	}
 	render() {
 		return (
@@ -56,7 +57,7 @@ class App extends React.Component {
 }
 
 let routes = (
-	<Route path="/" component={App}>
+	<Route path='/' component={App}>
 		<IndexRoute component={ComponentTop} />
 		<Route path='cardloan' component={ComponentCardloan} />
 		<Route path='creditcard' component={ComponentCreditcard} />
@@ -69,5 +70,5 @@ let routes = (
 );
 
 render((
-	<Router history={BrowserHistory}>{routes}</Router>
+	<Router history={browserHistory}>{routes}</Router>
 ), document.getElementById('react-contents'))
