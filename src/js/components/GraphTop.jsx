@@ -14,16 +14,14 @@ export default class GraphTop extends React.Component {
 			type: 'GET',
 			dataType: 'json',
 			cache: false,
-			success: (data) => {
-				this.setState({
-					data: data
-				});
-			},
-			error: (xhr, state, err) => {
-				console.error(this.props.url, status, err.toString());
-				console.log('error');
-			}
-		});
+		}).done(function(data){
+			this.setState({
+				data: data
+			});
+		}.bind(this)).fail(function(data){
+			console.error(this.props.url, status, err.toString());
+			console.log('error');
+		}.bind(this));
 	}
 	render() {
 		return　(
