@@ -3,6 +3,12 @@ import {Link} from 'react-router'
 
 const NavigationItems = [
 	{
+		id: null,
+		label: 'TOP',
+		route: '/',
+		api: '/'
+	},
+	{
 		id: 1,
 		label: '即日融資安心カードローン',
 		route: 'cardloan',
@@ -72,6 +78,31 @@ export default class Navigation extends React.Component {
 	}
 }
 
+class NavigationList extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+	handleClick(type) {
+		this.props.changeNavList(type);
+	}
+	render() {
+		return (
+			<ul className='c-list p-navigation'>
+			{this.props.NavigationItems.map(type => (
+				<NavigationItem
+					key={type.id}
+					data-graph-api={type.api}
+					label={type.label}
+					route={type.route}
+					handleClick={this.handleClick.bind(this, type)}
+					isActive={this.props.activeList === type.id}
+				/>
+			))}
+			</ul>
+		);
+	}
+}
+
 class NavigationItem extends React.Component {
 	constructor(props) {
 		super(props);
@@ -88,31 +119,6 @@ class NavigationItem extends React.Component {
 					{this.props.label}
 				</Link>
 			</li>
-		);
-	}
-}
-
-class NavigationList extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-	handleClick(type) {
-		this.props.changeNavList(type);
-	}
-	render() {
-		return (
-			<ul className='c-list p-navigation'>
-			{this.props.NavigationItems.map(type => (
-				<NavigationItem
-					key={type.id}
-					handleClick={this.handleClick.bind(this, type)}
-					data-graph-api={type.api}
-					label={type.label}
-					route={type.route}
-					isActive={this.props.activeList === type.id}
-				/>
-			))}
-			</ul>
 		);
 	}
 }

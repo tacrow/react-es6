@@ -24,9 +24,22 @@
 		}
 	}
 	&.is-active {
-		background-color: #666666;
+		background-color: #454545;
+		-webkit-transition: all .3s;
+		transition: all .3s;
 		a {
 			color: #61dafb;
+		}
+		&:first-child {
+			background-color: transparent;
+			a {
+				color: #ffffff;
+				&:hover {
+					color: #61dafb;
+					-webkit-transition: all .3s;
+					transition: all .3s;
+				}
+			}
 		}
 	}
 }

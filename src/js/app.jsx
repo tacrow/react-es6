@@ -2,7 +2,7 @@
 
 import React from 'react'
 import {render} from 'react-dom'
-import {Router, Route, Link, IndexRoute, browserHistory} from 'react-router'
+import {Router, Route, Link, IndexRoute, hashHistory} from 'react-router'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -46,7 +46,6 @@ class App extends React.Component {
 				<div id='l-contents' style={{height: + this.state.height + 'px'}}>
 					<SideContents />
 					<div id='l-contents__main'>
-						<div className='l-main__wrapper'>Main</div>
 						{this.props.children}
 					</div>
 				</div>
@@ -70,5 +69,5 @@ let routes = (
 );
 
 render((
-	<Router history={browserHistory}>{routes}</Router>
+	<Router history={hashHistory}>{routes}</Router>
 ), document.getElementById('react-contents'))
