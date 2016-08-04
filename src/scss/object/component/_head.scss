@@ -11,14 +11,10 @@
 	font-weight: bold;
 }
 
-.c-head--navigation {
-	padding: 5px 10px 10px 25px;
-	&:before {
-		content: '▶';
-		position: absolute;
-		left: 10px;
-		top: 5px;
-		color: #ffffff;
-		@include fs8;
-	}
+.c-head--sarvice {
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+	@include fs18;
+	font-weight: bold;
+	border-bottom: 2px solid #2d2d2d;
 }

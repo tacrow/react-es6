@@ -1,9 +1,17 @@
 import React from 'react'
 
+import Head from '../components/Head'
+
 export default class ComponentCreditcard extends React.Component {
+	constructor(props) {
+		super(props);
+	}
 	render() {
+		let titleHead = 'クレジットカード人気比較';
 		return(
-			<h2>クレジットカード人気比較</h2>
+			<div>
+				<Head title={titleHead} />
+			</div>
 		);
 	}
 }

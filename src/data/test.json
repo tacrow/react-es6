@@ -1,0 +1,37 @@
+[
+	{
+		"id": 1,
+		"autor": "User1",
+		"comment": "hogehogehogehogehogehogehogehogehogehogehogehoge"
+	},
+	{
+		"id": 2,
+		"autor": "User2",
+		"comment": "hogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehoge"
+	},
+	{
+		"id": 3,
+		"autor": "User3",
+		"comment": "hogehogehogehogehogehogehogehogehogehogehogehoge"
+	},
+	{
+		"id": 4,
+		"autor": "User4",
+		"comment": "hogehogehogehogehogehoge"
+	},
+	{
+		"id": 5,
+		"autor": "User5",
+		"comment": "hogehogehogehogehogehogehogehogehogehogehogehoge"
+	},
+	{
+		"id": 6,
+		"autor": "User6",
+		"comment": "hogehogehogehogehogehoge"
+	},
+	{
+		"id": 7,
+		"autor": "User7",
+		"comment": "hogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehoge"
+	}
+]

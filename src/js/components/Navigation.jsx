@@ -91,7 +91,7 @@ class NavigationList extends React.Component {
 			{this.props.NavigationItems.map(type => (
 				<NavigationItem
 					key={type.id}
-					data-graph-api={type.api}
+					api={type.api}
 					label={type.label}
 					route={type.route}
 					handleClick={this.handleClick.bind(this, type)}

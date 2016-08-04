@@ -1,9 +1,17 @@
 import React from 'react'
 
+import Head from '../components/Head'
+
 export default class ComponentFx extends React.Component {
+	constructor(props) {
+		super(props);
+	}
 	render() {
+		let titleHead = '外為FX徹底比較.com';
 		return(
-			<h2>外為FX徹底比較.com</h2>
+			<div>
+				<Head title={titleHead} />
+			</div>
 		);
 	}
 }

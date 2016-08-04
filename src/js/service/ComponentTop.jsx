@@ -1,9 +1,19 @@
 import React from 'react'
 
+import Head from '../components/Head'
+import GraphTop from '../components/GraphTop'
+
 export default class ComponentTop extends React.Component {
+	constructor(props) {
+		super(props);
+	}
 	render() {
-		return(
-			<h2>TOP</h2>
+		let titleHead = 'TOP';
+		return (
+			<div>
+				<Head title={titleHead} />
+				<GraphTop />
+			</div>
 		);
 	}
 }
