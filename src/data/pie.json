@@ -1,0 +1,33 @@
+[
+	{
+		"id": 1,
+		"label": "Pie Chart",
+		"data": [
+			{
+				"value": 55,
+				"color": "#f7464a",
+				"label": "Loading"
+			},
+			{
+				"value": 15,
+				"color": "#46bfbd",
+				"label": "Scripting"
+			},
+			{
+				"value": 30,
+				"color": "#fdb45c",
+				"label": "Rendering"
+			},
+			{
+				"value": 10,
+				"color": "#949fb1",
+				"label": "Painting"
+			},
+			{
+				"value": 20,
+				"color": "#4d5360",
+				"label": "Other"
+			}
+		]
+	}
+]

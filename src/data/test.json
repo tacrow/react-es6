@@ -1,37 +1,65 @@
 [
 	{
 		"id": 1,
-		"autor": "User1",
-		"comment": "hogehogehogehogehogehogehogehogehogehogehogehoge"
+		"type": "cardloan",
+		"label": "即日融資安心カードローン",
+		"labels": ["9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00"],	
+		"data": [65, 59, 80, 81, 56, 55, 40],
+		"fillColor": "rgba(255,155,10,.3)",
+		"pointColor": "rgba(255,155,10,1)"
 	},
 	{
 		"id": 2,
-		"autor": "User2",
-		"comment": "hogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehoge"
+		"type": "creditcard",
+		"label": "クレジットカード人気比較",
+		"labels": ["9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00"],	
+		"data": [65, 59, 80, 81, 56, 55, 40],
+		"fillColor": "rgba(94,185,188,.3)",
+		"pointColor": "rgba(94,185,188,1)"
 	},
 	{
 		"id": 3,
-		"autor": "User3",
-		"comment": "hogehogehogehogehogehogehogehogehogehogehogehoge"
+		"type": "fx",
+		"label": "外為FX徹底比較.com",
+		"labels": ["9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00"],	
+		"data": [65, 59, 80, 81, 56, 55, 40],
+		"fillColor": "rgba(12,102,171,.3)",
+		"pointColor": "rgba(12,102,171,1)"
 	},
 	{
 		"id": 4,
-		"autor": "User4",
-		"comment": "hogehogehogehogehogehoge"
+		"type": "datsumo",
+		"label": "脱毛口コミランキングナビ",
+		"labels": ["9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00"],	
+		"data": [65, 59, 80, 81, 56, 55, 40],
+		"fillColor": "rgba(251,168,162,.3)",
+		"pointColor": "rgba(251,168,162,1)"
 	},
 	{
 		"id": 5,
-		"autor": "User5",
-		"comment": "hogehogehogehogehogehogehogehogehogehogehogehoge"
+		"type": "denki",
+		"label": "電気比較情報.com",
+		"labels": ["9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00"],	
+		"data": [65, 59, 80, 81, 56, 55, 40],
+		"fillColor": "rgba(253,209,12,.3)",
+		"pointColor": "rgba(253,209,12,1)"
 	},
 	{
 		"id": 6,
-		"autor": "User6",
-		"comment": "hogehogehogehogehogehoge"
+		"type": "vod",
+		"label": "動画配信サービス比較情報.com",
+		"labels": ["9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00"],	
+		"data": [65, 59, 80, 81, 56, 55, 40],
+		"fillColor": "rgba(63,59,59,.3)",
+		"pointColor": "rgba(63,59,59,1)"
 	},
 	{
 		"id": 7,
-		"autor": "User7",
-		"comment": "hogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehogehoge"
+		"type": "sim",
+		"label": "格安SIM比較情報.com",
+		"labels": ["9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00"],	
+		"data": [65, 59, 80, 81, 56, 55, 40],
+		"fillColor": "rgba(24,73,103,.3)",
+		"pointColor": "rgba(24,73,103,1)"
 	}
 ]

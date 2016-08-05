@@ -10,3 +10,14 @@
 .l-main__wrapper {
 	padding: 10px;
 }
+
+#l-graph {
+
+}
+
+.l-graph__item {
+	float: left;
+	&:first-child {
+		margin-right: 30px;
+	}
+}

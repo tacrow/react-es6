@@ -1,0 +1,25 @@
+@charset "utf-8";
+/*
+ * objact/project/_graph.scss
+ */
+
+.p-graph-list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.p-graph-list__item {
+	align-items: stretch;
+	flex-basis: 32.5%;
+	margin-bottom: 10px;
+	padding: 10px;
+	border: 1px solid #d2d2d2;
+	background-color: #ffffff;
+	box-sizing: border-box;
+	canvas {
+		height: auto !important;
+		width: 100% !important;
+	}
+}

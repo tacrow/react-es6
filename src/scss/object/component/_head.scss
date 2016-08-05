@@ -18,3 +18,39 @@
 	font-weight: bold;
 	border-bottom: 2px solid #2d2d2d;
 }
+
+.c-head-graph {
+	margin-bottom: 10px;
+	padding-bottom: 3px;
+	color: #333333;
+	@include fs14;
+	font-weight: bold;
+}
+
+.c-head-graph--cardloan {
+	border-bottom: 3px solid #ff9b0a;
+}
+
+.c-head-graph--creditcard {
+	border-bottom: 3px solid #5eb9bc;
+}
+
+.c-head-graph--fx {
+	border-bottom: 3px solid #0c66ab;
+}
+
+.c-head-graph--datsumo {
+	border-bottom: 3px solid #fba8a2;
+}
+
+.c-head-graph--denki {
+	border-bottom: 3px solid #fdd10c;
+}
+
+.c-head-graph--vod {
+	border-bottom: 3px solid #3f3b3b;
+}
+
+.c-head-graph--sim {
+	border-bottom: 3px solid #184967;
+}

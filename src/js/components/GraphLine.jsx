@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router'
 import {Line} from 'react-chartjs'
 
-export default class GraphTop extends React.Component {
+export default class GraphLine extends React.Component {
 	constructor() {
 		super();
 		this.state = {
@@ -11,7 +11,7 @@ export default class GraphTop extends React.Component {
 	}
 	componentDidMount() {
 		$.ajax({
-			url: '/src/data/test.json',
+			url: '/src/data/line.json',
 			type: 'GET',
 			dataType: 'json',
 			cache: false,
@@ -25,64 +25,57 @@ export default class GraphTop extends React.Component {
 	}
 	render() {
 		return　(
-			<GraphTopList
+			<GraphLineSend
 				data={this.state.data}
 			/>
 		);
 	}
 }
 
-class GraphTopList extends React.Component {
+class GraphLineSend extends React.Component {
 	constructor(props) {
 		super(props);
 	}
 	render() {
 		return (
-			<ul className='p-graph-list'>
+			<div className='l-graph__item'>
 			{this.props.data.map(data => (
-				<GraphTopItem
+				<GraphLineChart
 					key={data.id}
-					type={data.type}
 					label={data.label}
 					labels={data.labels}
 					data={data.data}
-					fillColor={data.fillColor}
-					strokeColor={data.strokeColor}
-					pointColor={data.pointColor}
 				/>
 			))}
-			</ul>
+			</div>
 		);
 	}
 }
 
-class GraphTopItem extends React.Component {
+class GraphLineChart extends React.Component {
 	constructor(props) {
 		super(props);
 	}
 	render() {
-		let type = this.props.type;
 		let label = this.props.label;
 		let dataChart = {
 			labels: this.props.labels,
 			datasets: [
 				{
+					fill: true,
 					label: this.props.label,
-					fillColor: this.props.fillColor,
-					strokeColor: 'rgba(160,160,160,1)',
-					pointColor: this.props.pointColor,
-					pointStrokeColor: '#fff',
-					pointHighlightFill: '#fff',
-					pointHighlightStroke: 'rgba(220,220,220,1)',
+					fillColor: "rgba(250,195,168,0.5)",
+					strokeColor: "rgba(220,220,220,1)",
+					pointColor: "rgba(250,195,168,1)",
 					data: this.props.data,
 				}
 			]
 		};
 		return (
-			<li className='p-graph-list__item'>
-				<h3 className={'c-head-graph c-head-graph--' + type}>{label}</h3>
-				<Line data={dataChart} />
-			</li>
+			<div className='u-fill'>
+				<h3>{label}</h3>
+				<Line data={dataChart} width='450' height='250' />
+			</div>
 		);
 	}
 }
