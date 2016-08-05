@@ -81,7 +81,7 @@ class GraphTopItem extends React.Component {
 		return (
 			<li className='p-graph-list__item'>
 				<h3 className={'c-head-graph c-head-graph--' + type}>{label}</h3>
-				<Line data={dataChart} />
+				<Line data={dataChart} width='300' height='150' />
 			</li>
 		);
 	}
