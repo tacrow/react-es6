@@ -45,6 +45,7 @@ class GraphLineSend extends React.Component {
 					label={data.label}
 					labels={data.labels}
 					data={data.data}
+					data_ideal={data.data_ideal}
 				/>
 			))}
 			</div>
@@ -62,18 +63,26 @@ class GraphLineChart extends React.Component {
 			labels: this.props.labels,
 			datasets: [
 				{
-					fill: true,
 					label: this.props.label,
-					fillColor: "rgba(37,183,192,.3)",
+					fillColor: "rgba(97,218,251,.3)",
 					strokeColor: "rgba(220,220,220,1)",
-					pointColor: "rgba(37,183,192,1)",
+					pointColor: "rgba(97,218,251,1)",
+					pointHighlightFill: '#ffffff',
 					data: this.props.data,
+				},
+				{
+					label: this.props.label,
+					fillColor: "rgba(220,220,220,.3)",
+					strokeColor: "rgba(220,220,220,1)",
+					pointColor: "rgba(192,192,192,1)",
+					pointHighlightFill: '#ffffff',
+					data: this.props.data_ideal,
 				}
 			]
 		};
 		return (
 			<div className='u-fill'>
-				<h3 className='c-head-graph'>{label}</h3>
+				<h3 className='c-head-service-graph'>{label}</h3>
 				<Line data={dataChart} width='450' height='250' />
 			</div>
 		);

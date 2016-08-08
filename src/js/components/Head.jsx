@@ -6,7 +6,7 @@ export default class Head extends React.Component {
 	}
 	render() {
 		return　(
-			<h2 className='c-head--sarvice'>{this.props.title}</h2>
+			<h2 className='c-head--service'>{this.props.title}</h2>
 		);
 	}
 }

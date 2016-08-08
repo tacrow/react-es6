@@ -49,6 +49,7 @@ class GraphTopList extends React.Component {
 					fillColor={data.fillColor}
 					strokeColor={data.strokeColor}
 					pointColor={data.pointColor}
+					data_ideal={data.data_ideal}
 				/>
 			))}
 			</ul>
@@ -71,17 +72,25 @@ class GraphTopItem extends React.Component {
 					fillColor: this.props.fillColor,
 					strokeColor: 'rgba(160,160,160,1)',
 					pointColor: this.props.pointColor,
-					pointStrokeColor: '#fff',
-					pointHighlightFill: '#fff',
-					pointHighlightStroke: 'rgba(220,220,220,1)',
+					pointHighlightFill: '#ffffff',
 					data: this.props.data,
+				},
+				{
+					label: this.props.label,
+					fillColor: "rgba(220,220,220,.3)",
+					strokeColor: 'rgba(220,220,220,1)',
+					pointColor: "rgba(192,192,192,1)",
+					pointHighlightFill: '#ffffff',
+					data: this.props.data_ideal,
 				}
 			]
 		};
 		return (
 			<li className='p-graph-list__item'>
 				<h3 className={'c-head-graph c-head-graph--' + type}>{label}</h3>
-				<Line data={dataChart} width='300' height='150' />
+				<div className='p-graph-list__item__body'>
+					<Line data={dataChart} width='300' height='150' />
+				</div>
 			</li>
 		);
 	}

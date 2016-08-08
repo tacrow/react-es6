@@ -67,7 +67,7 @@ class GraphPieChart extends React.Component {
 		};
 		return (
 			<div className='p-graph-pie'>
-				<h3 className='c-head-graph'>{label}</h3>
+				<h3 className='c-head-service-graph'>{label}</h3>
 				<Pie data={dataChart} options={pieOption} width='350' height='250' />
 				<ul className='p-graph-pie__labels'>
 					<li><span></span>Loading</li>

@@ -11,20 +11,21 @@
 	font-weight: bold;
 }
 
-.c-head--sarvice {
-	margin-bottom: 10px;
+.c-head--service {
+	margin-bottom: 15px;
 	padding-bottom: 5px;
+	border-bottom: 2px solid #404040;
 	@include fs18;
 	font-weight: bold;
-	border-bottom: 2px solid #2d2d2d;
 }
 
 .c-head-graph {
-	margin-bottom: 10px;
-	padding-bottom: 3px;
-	color: #333333;
+	padding: 10px 10px 8px;
+	background-color: #5f5f5f;
+	color: #ffffff;
 	@include fs14;
 	font-weight: bold;
+	text-shadow: -1px -1px 0 rgba(0,0,0,.3);
 }
 
 .c-head-graph--cardloan {
@@ -53,4 +54,13 @@
 
 .c-head-graph--sim {
 	border-bottom: 3px solid #184967;
+}
+
+.c-head-service-graph {
+	margin-bottom: 15px;
+	padding: 0 0 3px 3px;
+	border-bottom: 1px solid #404040;
+	color: #333333;
+	@include fs16;
+	font-weight: bold;
 }
