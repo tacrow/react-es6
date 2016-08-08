@@ -44,6 +44,7 @@ class GraphTopList extends React.Component {
 					key={data.id}
 					type={data.type}
 					label={data.label}
+					date={data.date}
 					labels={data.labels}
 					data={data.data}
 					fillColor={data.fillColor}
@@ -64,6 +65,7 @@ class GraphTopItem extends React.Component {
 	render() {
 		let type = this.props.type;
 		let label = this.props.label;
+		let date = this.props.date;
 		let dataChart = {
 			labels: this.props.labels,
 			datasets: [
@@ -77,9 +79,9 @@ class GraphTopItem extends React.Component {
 				},
 				{
 					label: this.props.label,
-					fillColor: "rgba(220,220,220,.3)",
-					strokeColor: 'rgba(220,220,220,1)',
-					pointColor: "rgba(192,192,192,1)",
+					fillColor: "rgba(160,160,160,.2)",
+					strokeColor: 'rgba(160,160,160,1)',
+					pointColor: "rgba(200,200,200,1)",
 					pointHighlightFill: '#ffffff',
 					data: this.props.data_ideal,
 				}
@@ -88,6 +90,7 @@ class GraphTopItem extends React.Component {
 		return (
 			<li className='p-graph-list__item'>
 				<h3 className={'c-head-graph c-head-graph--' + type}>{label}</h3>
+				<span className='p-graph-date'>Date : {date}</span>
 				<div className='p-graph-list__item__body'>
 					<Line data={dataChart} width='300' height='150' />
 				</div>

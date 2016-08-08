@@ -4,9 +4,9 @@ import Head from '../components/Head'
 import GraphLine from '../components/GraphLine'
 import GraphPie from '../components/GraphPie'
 
-export default class ComponentSim extends React.Component {
+export default class ComponentFxHikaku extends React.Component {
 	render() {
-		let titleHead = '格安SIM 比較情報.com';
+		let titleHead = 'FX・外国為替 比較情報.com';
 		return(
 			<div>
 				<Head title={titleHead} />

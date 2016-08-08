@@ -43,6 +43,7 @@ class GraphPieSend extends React.Component {
 				<GraphPieChart
 					key={data.id}
 					label={data.label}
+					date={data.date}
 					data={data.data}
 				/>
 			))}
@@ -57,6 +58,7 @@ class GraphPieChart extends React.Component {
 	}
 	render() {
 		let label = this.props.label;
+		let date = this.props.date;
 		let dataChart = this.props.data;
 		let pieOption = {
 			segmentStrokeColor : "#ffffff",
@@ -68,6 +70,7 @@ class GraphPieChart extends React.Component {
 		return (
 			<div className='p-graph-pie'>
 				<h3 className='c-head-service-graph'>{label}</h3>
+				<span className='p-graph-date'>Date : {date}</span>
 				<Pie data={dataChart} options={pieOption} width='350' height='250' />
 				<ul className='p-graph-pie__labels'>
 					<li><span></span>Loading</li>

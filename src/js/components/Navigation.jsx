@@ -34,21 +34,39 @@ const NavigationItems = [
 	},
 	{
 		id: 5,
-		label: '電気比較情報.com',
+		label: '電気 比較情報.com',
 		route: 'denki',
 		api: 'denki'
 	},
 	{
 		id: 6,
-		label: '動画配信サービス比較情報.com',
+		label: '動画配信サービス 比較情報.com',
 		route: 'vod',
 		api: 'vod'
 	},
 	{
 		id: 7,
-		label: '格安SIM比較情報.com',
+		label: '格安SIM 比較情報.com',
 		route: 'sim',
 		api: 'sim'
+	},
+	{
+		id: 8,
+		label: 'クレジットカード 比較情報.com',
+		route: 'cardloan-hikaku',
+		api: 'cardloan-hikaku'
+	},
+	{
+		id: 9,
+		label: 'カードローン 比較情報.com',
+		route: 'creditcard-hikaku',
+		api: 'creditcard-hikaku'
+	},
+	{
+		id: 10,
+		label: 'FX・外国為替 比較情報.com',
+		route: 'fx-hikaku',
+		api: 'fx-hikaku'
 	}
 ];
 

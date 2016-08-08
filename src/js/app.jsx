@@ -16,6 +16,9 @@ import ComponentDatsumo from './service/ComponentDatsumo'
 import ComponentDenki from './service/ComponentDenki'
 import ComponentVod from './service/ComponentVod'
 import ComponentSim from './service/ComponentSim'
+import ComponentCardloanHikaku from './service/ComponentCardloanHikaku'
+import ComponentCreditcardHikaku from './service/ComponentCreditcardHikaku'
+import ComponentFxHikaku from './service/ComponentFxHikaku'
 
 class App extends React.Component {
 	constructor() {
@@ -33,7 +36,7 @@ class App extends React.Component {
 		window.removeEventListener('resize', this.windowResize.bind(this));
 	}
 	windowResize() {
-		let defHeight = 760;
+		let defHeight = 1120;
 		let windowHeight = $(window).height();
 		let contentHeight = windowHeight - 100;
 		if(defHeight > contentHeight) {
@@ -68,6 +71,9 @@ let routes = (
 		<Route path='denki' component={ComponentDenki} />
 		<Route path='vod' component={ComponentVod} />
 		<Route path='sim' component={ComponentSim} />
+		<Route path='cardloan-hikaku' component={ComponentCardloanHikaku} />
+		<Route path='creditcard-hikaku' component={ComponentCreditcardHikaku} />
+		<Route path='fx-hikaku' component={ComponentFxHikaku} />
 	</Route>
 );
 

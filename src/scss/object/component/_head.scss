@@ -20,6 +20,7 @@
 }
 
 .c-head-graph {
+	margin-bottom: 10px;
 	padding: 10px 10px 8px;
 	background-color: #5f5f5f;
 	color: #ffffff;
@@ -54,6 +55,18 @@
 
 .c-head-graph--sim {
 	border-bottom: 3px solid #184967;
+}
+
+.c-head-graph--cardloan-hikaku {
+	border-bottom: 3px solid #f02600;
+}
+
+.c-head-graph--creditcard-hikaku {
+	border-bottom: 3px solid #1095d7;
+}
+
+.c-head-graph--fx-hikaku {
+	border-bottom: 3px solid #087077;
 }
 
 .c-head-service-graph {
