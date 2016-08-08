@@ -64,16 +64,16 @@ class GraphLineChart extends React.Component {
 				{
 					fill: true,
 					label: this.props.label,
-					fillColor: "rgba(250,195,168,0.5)",
+					fillColor: "rgba(37,183,192,.3)",
 					strokeColor: "rgba(220,220,220,1)",
-					pointColor: "rgba(250,195,168,1)",
+					pointColor: "rgba(37,183,192,1)",
 					data: this.props.data,
 				}
 			]
 		};
 		return (
 			<div className='u-fill'>
-				<h3>{label}</h3>
+				<h3 className='c-head-graph'>{label}</h3>
 				<Line data={dataChart} width='450' height='250' />
 			</div>
 		);

@@ -33,11 +33,14 @@ class App extends React.Component {
 		window.removeEventListener('resize', this.windowResize.bind(this));
 	}
 	windowResize() {
-		const windowHeight = $(window).height();
-		const contentHeight = windowHeight - 100;
-		this.setState({
-			height: contentHeight
-		});
+		let defHeight = 760;
+		let windowHeight = $(window).height();
+		let contentHeight = windowHeight - 100;
+		if(defHeight > contentHeight) {
+			this.setState({ height: defHeight });
+		} else {
+			this.setState({ height: contentHeight });
+		}
 	}
 	render() {
 		return (

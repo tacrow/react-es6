@@ -25,9 +25,9 @@ export default class GraphPie extends React.Component {
 	}
 	render() {
 		return　(
-			<GraphPieSend
-				data={this.state.data}
-			/>
+			<div>
+				<GraphPieSend data={this.state.data} />
+			</div>
 		);
 	}
 }
@@ -43,7 +43,6 @@ class GraphPieSend extends React.Component {
 				<GraphPieChart
 					key={data.id}
 					label={data.label}
-					labels={data.labels}
 					data={data.data}
 				/>
 			))}
@@ -67,9 +66,16 @@ class GraphPieChart extends React.Component {
 			animationEasing : "linear"
 		};
 		return (
-			<div className='u-fill'>
-				<h3>{label}</h3>
-				<Pie data={dataChart} options={pieOption} width='450' height='250' />
+			<div className='p-graph-pie'>
+				<h3 className='c-head-graph'>{label}</h3>
+				<Pie data={dataChart} options={pieOption} width='350' height='250' />
+				<ul className='p-graph-pie__labels'>
+					<li><span></span>Loading</li>
+					<li><span></span>Scripting</li>
+					<li><span></span>Rendering</li>
+					<li><span></span>Painting</li>
+					<li><span></span>Other</li>
+				</ul>
 			</div>
 		);
 	}

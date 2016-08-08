@@ -23,3 +23,37 @@
 	// 	width: 100% !important;
 	// }
 }
+
+.p-graph-pie {
+	position: relative;
+	width: 450px;
+}
+
+.p-graph-pie__labels {
+	position: absolute;
+    top: 40%;
+    right: 0;
+	li {
+		span {
+			display: inline-block;
+			width: 20px;
+			height: 10px;
+			margin-right: 5px;
+		}
+		&:first-child {
+			span { background-color: #f7464a; }
+		}
+		&:nth-child(2) {
+			span { background-color: #46bfbd; }
+		}
+		&:nth-child(3) {
+			span { background-color: #fdb45c; }
+		}
+		&:nth-child(4) {
+			span { background-color: #949fb1; }
+		}
+		&:last-child {
+			span { background-color: #4d5360; }
+		}
+	}
+}

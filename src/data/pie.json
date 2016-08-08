@@ -4,26 +4,31 @@
 		"label": "Pie Chart",
 		"data": [
 			{
+				"id": 1,
 				"value": 55,
 				"color": "#f7464a",
 				"label": "Loading"
 			},
 			{
+				"id": 2,
 				"value": 15,
 				"color": "#46bfbd",
 				"label": "Scripting"
 			},
 			{
+				"id": 3,
 				"value": 30,
 				"color": "#fdb45c",
 				"label": "Rendering"
 			},
 			{
+				"id": 4,
 				"value": 10,
 				"color": "#949fb1",
 				"label": "Painting"
 			},
 			{
+				"id": 5,
 				"value": 20,
 				"color": "#4d5360",
 				"label": "Other"
