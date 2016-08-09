@@ -41,12 +41,8 @@ export default [
 		module: {
 			loaders: [
 				{
-					test: /\.css$/,
-					loader: ExtractTextPlugin.extract('style-loader', 'css-loader?minimize')
-				},
-				{
 					test: /\.scss$/,
-					loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
+					loader: ExtractTextPlugin.extract('style','css!postcss!sass')
 				}
 			]
 		},
@@ -54,7 +50,10 @@ export default [
 			extensions: ['', '.css']
 		},
 		plugins: [
-	        new ExtractTextPlugin('all.css')
-	    ]
+			new ExtractTextPlugin('all.css')
+		],
+		postcss: [
+			require('autoprefixer')
+		]
 	}
 ];

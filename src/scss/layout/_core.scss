@@ -15,9 +15,7 @@ html {
 }
 
 #l-contents {
-	-webkit-display: flex;
 	display: flex;
-	-webkit-align-items: stretch;
 	align-items: stretch;
 	width: 100%;
 	height: 100%;
@@ -31,6 +29,6 @@ html {
 
 #l-contents__main {
 	flex: 4;
-	padding: 30px;
+	padding: 20px 30px 30px;
 	background-color: #ffffff;
 }
