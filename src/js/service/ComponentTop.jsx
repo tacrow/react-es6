@@ -8,7 +8,7 @@ export default class ComponentTop extends React.Component {
 		super(props);
 	}
 	render() {
-		let titleHead = 'TOP';
+		const titleHead = 'TOP';
 		return (
 			<div>
 				<Head title={titleHead} />

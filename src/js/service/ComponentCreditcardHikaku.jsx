@@ -6,7 +6,7 @@ import GraphPie from '../components/GraphPie'
 
 export default class ComponentCreditcardHikaku extends React.Component {
 	render() {
-		let titleHead = 'クレジットカード 比較情報.com';
+		const titleHead = 'クレジットカード 比較情報.com';
 		return(
 			<div>
 				<Head title={titleHead} />

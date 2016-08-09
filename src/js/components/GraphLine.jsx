@@ -59,9 +59,9 @@ class GraphLineChart extends React.Component {
 		super(props);
 	}
 	render() {
-		let label = this.props.label;
-		let date = this.props.date;
-		let dataChart = {
+		const label = this.props.label;
+		const date = this.props.date;
+		const dataChart = {
 			labels: this.props.labels,
 			datasets: [
 				{

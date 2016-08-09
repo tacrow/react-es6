@@ -6,7 +6,7 @@ import GraphPie from '../components/GraphPie'
 
 export default class ComponentFxHikaku extends React.Component {
 	render() {
-		let titleHead = 'FX・外国為替 比較情報.com';
+		const titleHead = 'FX・外国為替 比較情報.com';
 		return(
 			<div>
 				<Head title={titleHead} />

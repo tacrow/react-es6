@@ -6,7 +6,7 @@ import GraphPie from '../components/GraphPie'
 
 export default class ComponentDenki extends React.Component {
 	render() {
-		let titleHead = '電力 比較情報.com';
+		const titleHead = '電力 比較情報.com';
 		return(
 			<div>
 				<Head title={titleHead} />

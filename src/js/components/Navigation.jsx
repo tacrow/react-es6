@@ -129,8 +129,8 @@ class NavigationItem extends React.Component {
 		this.props.handleClick();
 	}
 	render() {
-		let def = 'c-list p-navigation__item';
-		let active = 'c-list p-navigation__item is-active';
+		const def = 'c-list p-navigation__item';
+		const active = 'c-list p-navigation__item is-active';
 		return (
 			<li className={this.props.isActive ? active : def} data-graph-api={this.props.api} onClick={this.handleClick.bind(this)}>
 				<Link to={this.props.route}>

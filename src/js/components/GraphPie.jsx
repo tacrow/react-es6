@@ -57,10 +57,10 @@ class GraphPieChart extends React.Component {
 		super(props);
 	}
 	render() {
-		let label = this.props.label;
-		let date = this.props.date;
-		let dataChart = this.props.data;
-		let pieOption = {
+		const label = this.props.label;
+		const date = this.props.date;
+		const dataChart = this.props.data;
+		const pieOption = {
 			segmentStrokeColor : "#ffffff",
 			segmentStrokeWidth : 2,
 			animation : true,

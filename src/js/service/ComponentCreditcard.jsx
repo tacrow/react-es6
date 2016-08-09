@@ -6,7 +6,7 @@ import GraphPie from '../components/GraphPie'
 
 export default class ComponentCreditcard extends React.Component {
 	render() {
-		let titleHead = 'クレジットカード人気比較';
+		const titleHead = 'クレジットカード人気比較';
 		return(
 			<div>
 				<Head title={titleHead} />

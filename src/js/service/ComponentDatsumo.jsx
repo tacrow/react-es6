@@ -6,7 +6,7 @@ import GraphPie from '../components/GraphPie'
 
 export default class ComponentDatsumo extends React.Component {
 	render() {
-		let titleHead = '脱毛口コミランキングナビ';
+		const titleHead = '脱毛口コミランキングナビ';
 		return(
 			<div>
 				<Head title={titleHead} />

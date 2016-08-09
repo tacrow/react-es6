@@ -6,7 +6,7 @@ import GraphPie from '../components/GraphPie'
 
 export default class ComponentFx extends React.Component {
 	render() {
-		let titleHead = '外為FX徹底比較.com';
+		const titleHead = '外為FX徹底比較.com';
 		return(
 			<div>
 				<Head title={titleHead} />

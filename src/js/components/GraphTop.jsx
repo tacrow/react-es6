@@ -63,10 +63,10 @@ class GraphTopItem extends React.Component {
 		super(props);
 	}
 	render() {
-		let type = this.props.type;
-		let label = this.props.label;
-		let date = this.props.date;
-		let dataChart = {
+		const type = this.props.type;
+		const label = this.props.label;
+		const date = this.props.date;
+		const dataChart = {
 			labels: this.props.labels,
 			datasets: [
 				{
