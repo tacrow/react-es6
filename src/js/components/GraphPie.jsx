@@ -25,9 +25,7 @@ export default class GraphPie extends React.Component {
 	}
 	render() {
 		return　(
-			<div>
-				<GraphPieSend data={this.state.data} />
-			</div>
+			<GraphPieSend data={this.state.data} />
 		);
 	}
 }

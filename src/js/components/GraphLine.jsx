@@ -25,9 +25,7 @@ export default class GraphLine extends React.Component {
 	}
 	render() {
 		return　(
-			<GraphLineSend
-				data={this.state.data}
-			/>
+			<GraphLineSend data={this.state.data} />
 		);
 	}
 }
