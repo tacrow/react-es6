@@ -21,3 +21,16 @@
 		margin-right: 30px;
 	}
 }
+
+@media only screen and (max-width: 640px) {
+	.l-graph__item {
+		float: none;
+		&:first-child {
+			margin-right: 0;
+		}
+		canvas {
+			width: 300px!important;
+			height: auto!important;
+		}
+	}
+}

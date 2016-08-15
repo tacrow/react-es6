@@ -39,3 +39,26 @@
 		}
 	}
 }
+
+.p-toggle-side-vav {
+	display: none;
+	position: absolute;
+	right: -40px;
+	width: 40px;
+	height: 40px;
+	padding: 13px 2px;
+	border-radius: 0 3px 3px 0;
+	background-color: #2d2d2d;
+	color: #ffffff;
+	@include fs-base;
+	font-weight: bold;
+	box-sizing: border-box;
+	cursor: pointer;
+	box-shadow: 0 2px 3px rgba(0,0,0,.2);
+}
+
+@media only screen and (max-width: 640px) {
+	.p-toggle-side-vav {
+		display: block;
+	}
+}

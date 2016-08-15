@@ -22,6 +22,7 @@
 	padding: 10px;
 	box-sizing: border-box;
 	border: 1px solid #d2d2d2;
+	box-sizing: border-box;
 }
 
 .p-graph-pie {
@@ -31,8 +32,8 @@
 
 .p-graph-pie__labels {
 	position: absolute;
-    top: 45%;
-    right: 15px;
+	top: 45%;
+	right: 15px;
 	li {
 		span {
 			display: inline-block;
@@ -63,4 +64,25 @@
 	margin-bottom: 2px;
 	color: #666666;
 	@include fs12;
+}
+
+@media only screen and (max-width: 640px) {
+	.p-graph-list__item {
+		flex-basis: 100%;
+		width: 100%;
+	}
+	.p-graph-pie {
+		width: 100%;
+	}
+	.p-graph-pie__labels {
+		top: 40%;
+		right: 0;
+	}
+
+	.p-graph-list__item__body {
+		canvas {
+			width: 100%!important;
+			height: auto!important;
+		}
+	}
 }

@@ -21,35 +21,11 @@ import ComponentCreditcardHikaku from './service/ComponentCreditcardHikaku'
 import ComponentFxHikaku from './service/ComponentFxHikaku'
 
 class App extends React.Component {
-	constructor() {
-		super();
-		this.state = {
-			height: ''
-		};
-	}
-	componentDidMount() {
-		window.addEventListener('load', this.windowResize.bind(this));
-		window.addEventListener('resize', this.windowResize.bind(this));
-	}
-	componentWillUnmount() {
-		window.removeEventListener('load', this.windowResize.bind(this));
-		window.removeEventListener('resize', this.windowResize.bind(this));
-	}
-	windowResize() {
-		let defHeight = 1120;
-		let windowHeight = $(window).height();
-		let contentHeight = windowHeight - 100;
-		if(defHeight > contentHeight) {
-			this.setState({ height: defHeight });
-		} else {
-			this.setState({ height: contentHeight });
-		}
-	}
 	render() {
 		return (
 			<div>
 				<Header />
-				<div id='l-contents' style={{height: + this.state.height + 'px'}}>
+				<div id='l-contents' className='u-cf'>
 					<SideContents />
 					<div id='l-contents__main'>
 						{this.props.children}

@@ -92,7 +92,7 @@ class GraphTopItem extends React.Component {
 				<h3 className={'c-head-graph c-head-graph--' + type}>{label}</h3>
 				<span className='p-graph-date'>Date : {date}</span>
 				<div className='p-graph-list__item__body'>
-					<Line data={dataChart} width='300' height='150' />
+					<Line data={dataChart} />
 				</div>
 			</li>
 		);

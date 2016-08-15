@@ -15,20 +15,57 @@ html {
 }
 
 #l-contents {
-	display: flex;
-	align-items: stretch;
+	// display: flex;
+	// align-items: stretch;
 	width: 100%;
 	height: 100%;
 	min-height: 100%;
+	background-color: #ffffff;
 }
 
 #l-contents__side {
-	flex: 1;
+	// flex: 1;
+	position: relative;
+	float: left;
+	width: 16%;
 	background-color: #2d2d2d;
 }
 
 #l-contents__main {
-	flex: 4;
+	// flex: 4;
+	float: right;
+	width: 84%;
 	padding: 20px 30px 30px;
-	background-color: #ffffff;
+	// background-color: #ffffff;
+}
+
+#l-contents__side,
+#l-contents__main {
+	box-sizing: border-box;
+}
+
+@media only screen and (max-width: 640px) {
+	#l-contents__side {
+		z-index: 9999;
+		position: fixed;
+		top: 50px;
+		left: 0;
+		float: none;
+		width: 160px;
+		height: 100%;
+		transform: translateX(-160px);
+		transition: transform .3s;
+		will-change: none;
+		&.is-active {
+			transform: translateX(0px);
+			transition: transform .3s;
+			will-change: transform;
+		}
+	}
+
+	#l-contents__main {
+		float: none;
+		width: 100%;
+		padding: 60px 10px 10px;
+	}
 }
