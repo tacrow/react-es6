@@ -10,7 +10,7 @@ export default class ComponentFx extends React.Component {
 		return(
 			<div>
 				<Head title={titleHead} />
-				<div id='u-cf'>
+				<div className='u-cf'>
 					<GraphLine />
 					<GraphPie />
 				</div>
