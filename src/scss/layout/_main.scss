@@ -28,9 +28,11 @@
 		&:first-child {
 			margin-right: 0;
 		}
-		canvas {
-			width: 300px!important;
-			height: auto!important;
+		.p-graph-pie {
+			canvas {
+				width: 100%!important;
+				height: auto!important;
+			}
 		}
 	}
 }

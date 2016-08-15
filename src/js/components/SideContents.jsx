@@ -1,11 +1,10 @@
 import React from 'react'
-import Classnames from 'classnames'
 
 import Navigation from './Navigation'
 
 export default class SideContents extends React.Component {
-	constructor(props) {
-		super(props);
+	constructor() {
+		super();
 		this.state = {
 			height: '',
 			isActive: false
@@ -38,7 +37,9 @@ export default class SideContents extends React.Component {
 		return (
 			<div id='l-contents__side' className={this.state.isActive ? 'is-active' : ''} style={{height: + this.state.height + 'px'}}>
 				<Navigation />
-				<div className='p-toggle-side-vav' onClick={this.handleClick.bind(this)}>OPEN</div>
+				<div className='p-toggle-side-vav' onClick={this.handleClick.bind(this)}>
+					{this.state.isActive ? 'CLOSE' : 'OPEN'}
+				</div>
 			</div>
 		);
 	}
