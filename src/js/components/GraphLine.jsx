@@ -3,15 +3,15 @@ import {Link} from 'react-router'
 import {Line} from 'react-chartjs'
 
 export default class GraphLine extends React.Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		this.state = {
 			data: []
 		};
 	}
 	componentDidMount() {
 		$.ajax({
-			url: '/src/data/line.json',
+			url: '/src/data/line.json?type=' + this.props.param,
 			type: 'GET',
 			dataType: 'json',
 			cache: false,
@@ -81,7 +81,7 @@ class GraphLineChart extends React.Component {
 			]
 		};
 		return (
-			<div className='u-fill'>
+			<div className='p-graph-line'>
 				<h3 className='c-head-service-graph'>{label}</h3>
 				<span className='p-graph-date'>Date : {date}</span>
 				<Line data={dataChart} />

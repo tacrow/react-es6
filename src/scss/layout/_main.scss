@@ -17,6 +17,7 @@
 
 .l-graph__item {
 	float: left;
+	width: 450px;
 	&:first-child {
 		margin-right: 30px;
 	}
@@ -26,6 +27,8 @@
 	.l-graph__item {
 		float: none;
 		margin-bottom: 30px;
+		flex-basis: 100%;
+    	width: 100%;
 		&:first-child {
 			margin-right: 0;
 		}

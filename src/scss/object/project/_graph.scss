@@ -24,6 +24,13 @@
 	box-sizing: border-box;
 }
 
+// .p-graph-line {
+// 	canvas {
+// 		width: 450px!important;
+// 		height: 225px!important;
+// 	}
+// }
+
 .p-graph-pie {
 	position: relative;
 	width: 450px;
@@ -70,6 +77,13 @@
 		flex-basis: 100%;
 		width: 100%;
 	}
+	// .p-graph-line {
+	// 	canvas {
+	// 		width: 100%!important;
+	// 		height: auto!important;
+	// 	}
+	// }
+	.p-graph-line,
 	.p-graph-pie {
 		width: 100%;
 	}

@@ -3,15 +3,15 @@ import {Link} from 'react-router'
 import {Core,Pie} from 'react-chartjs'
 
 export default class GraphPie extends React.Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		this.state = {
 			data: []
 		};
 	}
 	componentDidMount() {
 		$.ajax({
-			url: '/src/data/pie.json',
+			url: '/src/data/pie.json?type=' + this.props.param,
 			type: 'GET',
 			dataType: 'json',
 			cache: false,
