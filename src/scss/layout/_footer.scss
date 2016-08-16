@@ -15,3 +15,13 @@
 	@include fs12;
 	text-align: center;
 }
+
+@media only screen and (max-width: 640px) {
+	#l-footer {
+		height: 40px;
+	}
+	.l-footer__copyright {
+		padding: 12px 10px 10px;
+		@include fs10;
+	}
+}

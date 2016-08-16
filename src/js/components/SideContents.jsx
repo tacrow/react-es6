@@ -21,11 +21,16 @@ export default class SideContents extends React.Component {
 	windowResize() {
 		let defHeight = 1082;
 		let windowHeight = $(window).height();
+		let windowWidth = $(window).width();
 		let contentHeight = windowHeight - 100;
-		if(defHeight > contentHeight) {
-			this.setState({ height: defHeight });
+		if(windowWidth > 640) {
+			if(defHeight > contentHeight) {
+				this.setState({ height: defHeight });
+			} else {
+				this.setState({ height: contentHeight });
+			}
 		} else {
-			this.setState({ height: contentHeight });
+			this.setState({ height: windowHeight - 40 });
 		}
 	}
 	handleClick() {
@@ -35,9 +40,9 @@ export default class SideContents extends React.Component {
 	}
 	render() {
 		return (
-			<div id='l-contents__side' className={this.state.isActive ? 'is-active' : ''} style={{height: + this.state.height + 'px'}}>
+			<div id='l-contents__side' className={this.state.isActive ? 'is-active' : ''} onClick={this.handleClick.bind(this)} style={{height: + this.state.height + 'px'}}>
 				<Navigation />
-				<div className='p-toggle-side-vav' onClick={this.handleClick.bind(this)}>
+				<div className='p-toggle-side-nav' onClick={this.handleClick.bind(this)}>
 					{this.state.isActive ? 'CLOSE' : 'OPEN'}
 				</div>
 			</div>

@@ -40,9 +40,10 @@
 	}
 }
 
-.p-toggle-side-vav {
+.p-toggle-side-nav {
 	display: none;
 	position: absolute;
+	top: 80%;
 	right: -40px;
 	width: 40px;
 	height: 40px;
@@ -59,7 +60,7 @@
 }
 
 @media only screen and (max-width: 640px) {
-	.p-toggle-side-vav {
+	.p-toggle-side-nav {
 		display: block;
 	}
 }

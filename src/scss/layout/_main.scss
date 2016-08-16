@@ -25,12 +25,35 @@
 @media only screen and (max-width: 640px) {
 	.l-graph__item {
 		float: none;
+		margin-bottom: 30px;
 		&:first-child {
 			margin-right: 0;
 		}
 		.p-graph-pie {
 			canvas {
 				width: 100%!important;
+				height: auto!important;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 414px) {
+	.l-graph__item {
+		.p-graph-pie {
+			canvas {
+				width: 85%!important;
+				height: auto!important;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	.l-graph__item {
+		.p-graph-pie {
+			canvas {
+				width: 90%!important;
 				height: auto!important;
 			}
 		}

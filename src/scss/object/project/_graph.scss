@@ -82,4 +82,8 @@
 		padding: 0;
 		border: 0 none;
 	}
+
+	.p-graph-date {
+		@include fs10;
+	}
 }

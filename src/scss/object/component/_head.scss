@@ -77,3 +77,14 @@
 	@include fs16;
 	font-weight: bold;
 }
+
+@media only screen and (max-width: 640px) {
+	.c-head--service {
+		margin-bottom: 10px;
+		@include fs14;
+	}
+	.c-head-service-graph {
+		@include fs12;
+		margin-bottom: 5px;
+	}
+}
