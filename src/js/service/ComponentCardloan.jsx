@@ -12,8 +12,8 @@ export default class ComponentCardloan extends React.Component {
 			<div>
 				<Head title={titleHead} />
 				<div className='u-cf'>
-					<GraphLine param = {param} />
-					<GraphPie param = {param} />
+					<GraphLine param={param} />
+					<GraphPie param={param} />
 				</div>
 			</div>
 		);
