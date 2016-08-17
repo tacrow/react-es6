@@ -84,7 +84,9 @@ class GraphLineChart extends React.Component {
 			<div className='p-graph-line'>
 				<h3 className='c-head-service-graph'>{label}</h3>
 				<span className='p-graph-date'>Date : {date}</span>
-				<Line data={dataChart} />
+				<div className='u-fill'>
+					<Line data={dataChart} />
+				</div>
 			</div>
 		);
 	}

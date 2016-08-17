@@ -24,16 +24,9 @@
 	box-sizing: border-box;
 }
 
-// .p-graph-line {
-// 	canvas {
-// 		width: 450px!important;
-// 		height: 225px!important;
-// 	}
-// }
-
 .p-graph-pie {
 	position: relative;
-	width: 450px;
+	width: 350px;
 }
 
 .p-graph-pie__labels {
@@ -77,16 +70,12 @@
 		flex-basis: 100%;
 		width: 100%;
 	}
-	// .p-graph-line {
-	// 	canvas {
-	// 		width: 100%!important;
-	// 		height: auto!important;
-	// 	}
-	// }
+
 	.p-graph-line,
 	.p-graph-pie {
 		width: 100%;
 	}
+	
 	.p-graph-pie__labels {
 		top: 40%;
 		right: 0;
@@ -98,6 +87,7 @@
 	}
 
 	.p-graph-date {
+		margin-bottom: 5px;
 		@include fs10;
 	}
 }
