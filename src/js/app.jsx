@@ -2,7 +2,7 @@
 
 import React from 'react'
 import {render} from 'react-dom'
-import {Router, Route, Link, IndexRoute, hashHistory} from 'react-router'
+import {Router, Route, Link, IndexRoute, hashHistory, browserHistory} from 'react-router'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -55,4 +55,4 @@ let routes = (
 
 render((
 	<Router history={hashHistory}>{routes}</Router>
-), document.getElementById('react-contents'))
+), document.getElementById('react-contents'));
