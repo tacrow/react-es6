@@ -1,0 +1,31 @@
+@charset "utf-8";
+/*
+ * objact/component/_form.scss
+ */
+
+.c-form {
+	margin-bottom: 30px;
+	border-bottom: 1px solid #d2d2d2;
+}
+
+.c-wrap-select {
+	display: inline-block;
+	position: relative;
+	margin-bottom: 30px;
+	&:after {
+		content: '▼';
+		position: absolute;
+		top: 8px;
+		right: 10px;
+		color: #666666;
+		@include fs10;
+	}
+}
+
+.c-select {
+	width: 300px;
+	padding: 7px 0 5px 10px;
+	border: 1px solid #d2d2d2;
+	border-radius: 3px;
+	@include fs12;
+}

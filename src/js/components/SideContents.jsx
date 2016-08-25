@@ -19,7 +19,7 @@ export default class SideContents extends React.Component {
 		window.removeEventListener('resize', this.windowResize.bind(this));
 	}
 	windowResize() {
-		let defHeight = 1082;
+		let defHeight = 1186;
 		let windowHeight = $(window).height();
 		let windowWidth = $(window).width();
 		let contentHeight = windowHeight - 100;

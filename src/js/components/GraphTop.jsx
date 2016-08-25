@@ -3,15 +3,15 @@ import {Link} from 'react-router'
 import {Line} from 'react-chartjs'
 
 export default class GraphTop extends React.Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		this.state = {
 			data: []
 		};
 	}
 	componentDidMount() {
 		$.ajax({
-			url: '/src/data/test.json',
+			url: '/src/data/test.json?date=' + this.props.dateParam,
 			type: 'GET',
 			dataType: 'json',
 			cache: false,
@@ -30,6 +30,9 @@ export default class GraphTop extends React.Component {
 			/>
 		);
 	}
+}
+GraphTop.propTypes = {
+	dateParam: React.PropTypes.string.isRequired
 }
 
 class GraphTopList extends React.Component {

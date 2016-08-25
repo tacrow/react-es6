@@ -1,5 +1,6 @@
 import React from 'react'
 
+import FormSelectDate from '../components/FormSelectDate'
 import Head from '../components/Head'
 import GraphLine from '../components/GraphLine'
 import GraphPie from '../components/GraphPie'
@@ -10,6 +11,7 @@ export default class ComponentSim extends React.Component {
 		const param = 'sim';
 		return(
 			<div>
+				<FormSelectDate />
 				<Head title={titleHead} />
 				<div className='u-cf'>
 					<GraphLine param={param} />
